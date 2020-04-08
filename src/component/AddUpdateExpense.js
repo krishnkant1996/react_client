@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export function AddUpdateExpense(props) {
-  console.log(props)
   const [id, setID] = React.useState('');
   const [name, setName] = React.useState('');
   const [amount, setAmount] = React.useState('');
@@ -50,7 +49,6 @@ export function AddUpdateExpense(props) {
     }
   }, [props])
 
-  console.log(selectedDate)
 
   return (
     <>
@@ -95,11 +93,16 @@ export function AddUpdateExpense(props) {
             Cancel
           </Button>
           <Button variant="outlined" onClick={()=>{
-            console.log(selectedDate)
             addExpense(id,name,
               amount,
               categoryName,
               selectedDate);
+              setID("");
+              setName("");
+              setAmount("")
+              setCategory("")
+              setSelectedDate("")
+        
             props.handleClose();
             }} color="primary">
             Submit

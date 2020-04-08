@@ -140,9 +140,9 @@ export default function Home() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-        <Route exact path="/" component={Expenses}/>
-        <Route exact path="/setting" component={Setting}/>
-        <Route exact path="/profile" component={Profile}/>
+        <Route exact path="/react_client/" component={Expenses}/>
+        <Route exact path="/react_client/setting" component={Setting}/>
+        <Route exact path="/react_client/profile" component={Profile}/>
           <Box pt={4}>
             <Copyright />
           </Box>

@@ -19,7 +19,6 @@ export const getBudget = () => {
     return dispatch => {
         axios.get(apiUrl+'/get-budget')
         .then( response => {
-            console.log(response)
             dispatch(setBudget(response.data));
         })
         .catch( error => {

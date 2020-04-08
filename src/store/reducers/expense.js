@@ -7,7 +7,6 @@ const initialState = {
     building: false
 };
 const setExpenses = (state, action) => {
-    console.log(action, state)
     return updateObject( state, {
         expenses: action.expenses,
         error: false,

@@ -74,13 +74,13 @@ export  function Setting(props) {
                 label="Categorie name here"
                 multiline
                 rowsMax="4"
+                value={categoryName}
                 onChange={(e)=>{setCategoryName(e.target.value)}}
               />                </Grid>
               <Grid item xs={4} md={4} lg={4}>
-                <Button variant="contained" color="primary" onClick={()=>{
+                <Button variant="contained" color="primary" onClick={(e)=>{
                   addCategory(categoryName);
-                    setCategoryName("")
-                
+                  setCategoryName("")
                 }}>
                   Add
                 </Button>

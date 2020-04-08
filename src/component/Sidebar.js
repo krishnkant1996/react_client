@@ -6,19 +6,19 @@ import { Link } from 'react-router-dom';
 
 export const Sidebar = (
   <div>
-    <ListItem button component={Link} to="/">
+    <ListItem button component={Link} to="/react_client/">
       <ListItemIcon>
         <Home />
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItem>
-    <ListItem button component={Link} to="/setting">
+    <ListItem button component={Link} to="/react_client/setting">
       <ListItemIcon>
         <Settings />
       </ListItemIcon>
       <ListItemText primary="Setting"  />
     </ListItem>
-    <ListItem button component={Link} to="/profile">
+    <ListItem button component={Link} to="/react_client/profile">
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>

@@ -28,7 +28,6 @@ export function ExpenseList(props) {
   const [open, setOpen] = React.useState(false);
   const [edit, setEdit] = React.useState(false);
   const [expenseData, setExpenseData] = React.useState([]);
-  console.log(props)
   const classes = useStyles();
   const { getExpenses, expenses,deleteExpense } = props;
 

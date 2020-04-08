@@ -20,7 +20,6 @@ export const getCategory = () => {
     return dispatch => {
         axios.get(apiUrl+'/all-categories')
         .then( response => {
-            console.log(response)
             dispatch(setCategory(response.data));
 
         })
@@ -42,7 +41,6 @@ export const addCategory = (name) => {
     }
 };
 export const deleteCategory = (id) => {
-    console.log(id)
     return dispatch => {
         axios.post(apiUrl+'/category-delete',{id} )
         .then( response => {

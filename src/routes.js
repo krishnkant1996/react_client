@@ -13,7 +13,7 @@ const AppRouter = () => (
       <Switch>
         <Route exact path="/signIn" component={signIn} />
 
-              <Route path="/" component={Home} />
+              <Route path="/react_client" component={Home} />
         
       </Switch>
     </div>

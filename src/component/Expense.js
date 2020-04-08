@@ -101,7 +101,6 @@ export  function Expenses(props) {
       }
       },[budget,getBudget])
     useEffect(() => {
-      console.log(expenses)
       let  exp = {};
       let cat;
       cat = expenses.forEach((d, i) => {
@@ -110,15 +109,12 @@ export  function Expenses(props) {
           exp[category] + d['amount'] :
           d['amount']
       });
-      console.log("exp",exp)
-      console.log("Object.keys.exp",Object.keys(exp))
       let totalExense=0 ;
       let newObj=[['Amount', 'In INR']]
       for (let i=0; i<Object.keys(exp).length; i++) { 
         totalExense = totalExense+exp[Object.keys(exp)[i]];
         newObj.push([Object.keys(exp)[i],exp[Object.keys(exp)[i]]]) ;
       }
-      console.log("budget",budget)
 
       let budgetValue = [['Amount', 'In INR'],["Remaining amount",(budget.amount-totalExense)],["Total Expenses",totalExense]];
       setCategoryData(newObj)

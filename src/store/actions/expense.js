@@ -20,7 +20,6 @@ export const getExpenses = () => {
     return dispatch => {
         axios.get(apiUrl+'/all-expenses')
         .then( response => {
-            console.log(response)
             dispatch(setExpenses(response.data));
 
         })
@@ -47,7 +46,6 @@ export const addExpense = (id,
     }
 };
 export const deleteExpense = (id) => {
-    console.log(id)
     return dispatch => {
         axios.post(apiUrl+'/expense-delete',{id} )
         .then( response => {
